@@ -16,9 +16,7 @@ module.exports.createStore = () => {
     const reservationSchema = new Schema({
         guest_id: {type:Schema.Types.ObjectId,required:true},
         room_id: Schema.Types.ObjectId,
-        // arrival_date: {type: Date, required:true},
         arrival_date: String,
-        // departure_date: {type: Date, required:true}
         departure_date: String
     })
 
