@@ -5,7 +5,6 @@ const typeDefs = gql`
   type User {
     _id: String!
     username: String!
-    # reservations: [Reservation]
   }
 
   type Location {
@@ -27,14 +26,6 @@ const typeDefs = gql`
     hotel: Hotel
   }
 
-  # type Reservation {
-  #   id: String!
-  #   guest: User!
-  #   arrival_date: String!
-  #   departure_date: String!
-  #   hotel: Hotel!
-  # }
-
   type Reservation {
     id: String!
     guest: User!
@@ -54,7 +45,6 @@ const typeDefs = gql`
 
   type ReservationUpdateResponse{
     success: Boolean!
-    # message: String
     reservation: Reservation
   }
 
@@ -66,7 +56,6 @@ const typeDefs = gql`
 
   type Mutation{
     createReservation(input:ReservationCreator):ReservationUpdateResponse!
-    # createReservation(input:ReservationCreator):Reservation
   }
 
 `;

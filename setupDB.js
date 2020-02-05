@@ -1,11 +1,9 @@
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
+var Int32 = require('mongoose-int32');
 const { Schema } = mongoose;
 
 const url = 'mongodb://localhost:27017/hotelz';
-
-
-var Int32 = require('mongoose-int32');
 
 mongoose.connect(url, { useNewUrlParser: true });
 mongoose.connection.once('open', () => console.log(`Connected to mongo at ${url}`));
@@ -27,7 +25,7 @@ const setupUsers = () => {
 }
 
 const hotelIds = []
-let setupHotels = ()=>{
+const setupHotels = ()=>{
     // create 2 hotels
     const hotelDefs = [
         {
@@ -55,7 +53,6 @@ let setupHotels = ()=>{
     })
     
     const hotels = mongoose.model('hotels',hotelSchema)
-    // let hotel = new hotels({name:'Sheraton',location:{type:'point',coordinates:[40,-90]}})
     let hotelObjects = []
     hotelDefs.map(i=>{
         let hotel = new hotels({

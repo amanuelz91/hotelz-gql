@@ -11,7 +11,7 @@ const dataSources = () => ({
 
 // the function that sets up the global context for each resolver, using the req
 const context = async ({ req }) => {
-  // // simple auth check on every request
+  // simple auth check on every request
   const auth = (req.headers && req.headers.authorization) || '';
   const username = auth
   const user = await store.users.find({username})

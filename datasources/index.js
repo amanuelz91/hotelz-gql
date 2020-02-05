@@ -51,14 +51,11 @@ class ReservationAPI  extends DataSource{
             }
             const existingReservations = await returnReservationsInTimeRange(arrival_date_ISO,departure_date_ISO,this.store.reservations,room_id)
             if(existingReservations.length !== 0){
-                // console.log('existing reservation ',existingReservations)
                 return false
             }
             let newRes = await newReservation.save()
-            // console.log('new reservation: ',newRes)
             return newRes
         }catch(error){
-            console.log('error',error)
             return false
         }
     }

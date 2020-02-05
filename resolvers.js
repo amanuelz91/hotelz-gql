@@ -28,7 +28,6 @@ module.exports = {
             }else{
                 return{success:false}
             }
-            // console.log
         }
     },
     ReservationUpdateResponse:{
