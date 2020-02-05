@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Amanuel Zeryihun",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "apollo-datasource": "^0.6.4",
+    "apollo-datasource-mongodb": "^0.2.1",
+    "apollo-server": "^2.9.15",
+    "graphql": "^14.5.8",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.3",
+    "mongoose-int32": "^0.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "setup": "node ./setupDB.js"
+  }
+}
