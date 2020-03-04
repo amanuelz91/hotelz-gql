@@ -3,7 +3,7 @@
 ## Setup Server
 Requirements: Node *13.6.0* & Mongo
 ### 1. Install Dependencies 
-1.`yarn install` 
+1. Run `yarn install` 
 ### 2. Setup Database
 1. Run `mongod` in terminal
 2. Run `node setupDB.js`
