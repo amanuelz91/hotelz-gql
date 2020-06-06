@@ -8,7 +8,7 @@
   "dependencies": {
     "apollo-datasource": "^0.6.4",
     "apollo-datasource-mongodb": "^0.2.1",
-    "apollo-server": "^2.9.15",
+    "apollo-server": "^2.14.2",
     "graphql": "^14.5.8",
     "mongodb": "^3.4.1",
     "mongoose": "^5.8.3",
